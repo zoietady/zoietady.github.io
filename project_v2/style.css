@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+div{
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2{
+    margin: 0;
+    padding: 0;
+}
+
+#master-container{
+    height: 97.3vh;
+    width: 98.6vw;
+    display: grid;
+    grid-template-columns: 74% 25%;
+    grid-template-rows: 10vh 5vh 3vh 72vh 1vh;
+    padding:10px;
+    grid-gap:10px;
+    background-color: lightgrey;
+}
+
+#master-container > *{
+    
+} 
+
+#header-link{
+    text-decoration: none;
+    background-color: none;
+}
+
+
+#main-header h1{
+    margin-bottom: 0.4em;
+}
+
+#main-header a{
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0.4em 0.8em 0.4em 0.8em;
+    border-radius: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+#desc{
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    padding-left: 1em ;
+    padding-right: 1em;
+}
+
+
+#variable-controller{
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+
+button{
+    padding: 0.4em 0.8em 0.4em 0.8em;
+    border-radius: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.9em;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+}
+
+select{
+    padding: 0.6em 0.8em 0.4em 0.8em;
+    border-radius: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.9em;
+    border: none;
+}
+
+#chart{
+    grid-column: 1;
+    grid-row: 4;
+    /* height: 70vh; */
+    background-color: white;
+    border-radius: 20px;
+}
+
+#legend{
+    position: absolute;
+    bottom: 4%;
+    left: 1.1%;
+    /* border: black 2px solid; */
+    padding: 1em;
+}
+
+#variable{
+    position: absolute;
+    top: 22%;
+    left: 1.5%;
+}
+
+.colorBox {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    margin-right: 0.7em;
+    border: none;
+}
+
+#tooltip{
+    grid-column: 2;
+    grid-row: 4;
+    /* height: 70vh; */
+    text-align: center;
+    font-size: .8em;
+    display: grid;
+    grid-template-rows: 50% 8% auto;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+#pieChart{
+}
+
+#pielegend{
+    margin-top: 1em;
+}
+
+#pielegend .colorBox{
+    margin-right: 0.2em;
+    margin-left: 0.9em;
+}
+
+#details{
+    height: auto;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1;
+    grid-gap:2px;
+    padding-bottom: 1.2em;
+}
+
+#details > *{
+    margin-left: 1.2em;
+}
+
+
+footer{
+    grid-column: 1/ span 2;
+    grid-row: 5;
+    font-size: 10px;
+    text-align: center;
+}
+
+
+

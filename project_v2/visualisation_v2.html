@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoomable Scatter plot</title>
+
+    <script src="./visualisation_v2.js" defer></script>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <!-- <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="master-container"> 
+        <div id="main-header">
+            <h1>Waste Generation and Economic Output </h1>
+            <a href="../index.html">Home</a> 
+            <a href="../project_v2/visualisation_v2.html">Choropleth</a> 
+            <a href="../project_v1/visualisation_v1.html">Bubble Plot</a> <a href="http://">References</a>
+        </div>
+        <div id="variable-controller">
+            <button id="popBtn" style="display: inline-block;">Population</button>
+            <button id="gdpBtn" style="display: inline-block;">GDP</button>
+            <button id="mswBtn" style="display: inline-block;">MSW</button>
+            <button id="ewbtn" style="display: inline-block;">E-Waste</button>
+            <button id="btn2" style="display: inline-block;">GDP Per Capita</button>
+            <button id="btn1" style="display: inline-block;">MSW Per Capita</button>
+            <button id="ewCapbtn" style="display: inline-block;">E-Waste Per Capita</button>
+            <button id="btn3" style="display: inline-block;">MSW/GDP</button>
+            <button id="ewGdp" style="display: inline-block;">E-waste/GDP</button>
+            <button id="pwr" style="display: inline-block;">Percent Waste Recycled</button>
+            
+            <select name="incomeClassFilter" id="incomeClassFilter">
+                <option value="N">None</option>
+                <option value="HIC">High Income</option>
+                <option value="UMC">Upper Middle Income</option>
+                <option value="LMC">Lower Middle Income</option>
+                <option value="LIC">Low Income</option>
+            </select>
+        </div>
+        <div id="desc">
+            <b><dfn id="variable-to-def">Municipal Solid Waste Per Capita</dfn> </b> - <span id="definition"> total waste produced at the municipal level per person living in the country </span>
+        </div>
+        
+    
+    <div id="chart">
+        <div id="legend">
+        </div>
+
+        <div id="variable">
+            <h3 id="active">Municipal Solid Waste Per Capita</h3>
+        </div>
+    </div>
+    <div id="tooltip">
+        <div id="pieChart">
+        </div>
+        
+        <div id="pielegend">
+        </div>
+        
+        <div id="details">
+            <div id="populationCon"><b>Population:</b> <span id="population"></span></div>
+            <div id="mswCon"><b>Municipal Solid Waste (MSW):</b> <span id="msw"></span> Tons</div>
+            <div id="ewCon"><b>Electronic Waste (E-Waste):</b> <span id="ew"></span> Tons</div>
+            <div id="gdpCon"><b>Gross Domestic Product (GDP):</b> <span id="gdp"></span> USD</div>
+            <div id="mswcapCon"><b>MSW per Capita:</b> <span id="mswcap"></span> Tons</div>
+            <div id="ewcapCon"><b>E-Waste per Capita:</b> <span id="ewcap"></span> Tons</div>
+            <div id="gdpcapCon"><b>GDP per Capita: </b><span id="gdpcap"></span>USD</div>
+            <div id="recCon"><b>Percent Waste Recycled:</b> <span id="rec"></span> %</div>
+            <div id="incCon"><b>Income Catgeory:</b> <span id="inc"></span></div>
+        </div>
+    </div>
+
+    <footer>
+        © 2021 Euan Giligan, Zoie Tad-y
+    </footer>
+    </div>
+</body>
+</html>
