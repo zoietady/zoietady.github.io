@@ -63,7 +63,7 @@ function init() {
             .append("circle")
             .attr("cx", function (d) { return x(d.population); })
             .attr("cy", function (d) { return y(d.gdp); })
-            .attr("r", function (d) { return d.total_solid_waste_generated_tons_year/200000; })
+            .attr("r", function (d) { return d.total_solid_waste_generated_tons_year/500000; })
             .attr('fill', function (d) { return (color(d.income_id)) })
             .style("opacity", 0.5)
             
@@ -80,7 +80,7 @@ function init() {
             .attr("dx", function (d) { return x(d.population); })
             .attr("dy", function (d) { return y(d.gdp); })
             .attr("text-anchor", "middle")
-            .style("font-size", function(d) {return d.total_solid_waste_generated_tons_year/3000000 < 10? 10:d.total_solid_waste_generated_tons_year/2000000;  + "px"; })
+            .style("font-size", function(d) {return d.total_solid_waste_generated_tons_year/4000000 < 10? 10:d.total_solid_waste_generated_tons_year/4000000;  + "px"; })
             .attr("transform","translate(" + 0 + " ," + 5 + ")")
             
         
@@ -133,7 +133,7 @@ function init() {
                 .selectAll("circle")
                 .attr("cx", function (d) { return x(d.population); })
                 .attr("cy", function (d) { return y(d.gdp); })
-                .attr("r", function (d) { return d.total_solid_waste_generated_tons_year/200000; })
+                .attr("r", function (d) { return d.total_solid_waste_generated_tons_year/500000; })
                 .attr('fill', function (d) { return (color(d.income_id)) })
                 .style("opacity", 0.5)
 
@@ -149,7 +149,7 @@ function init() {
                 .selectAll("circle")
                 .attr("cx", function (d) { return x(d.population); })
                 .attr("cy", function (d) { return y(d.gdp); })
-                .attr("r", function (d) { return d.e_waste_tons_year/5000; })
+                .attr("r", function (d) { return d.e_waste_tons_year/8000; })
                 .attr('fill', function (d) { return (color(d.income_id)) })
                 .style("opacity", 0.5)
 
