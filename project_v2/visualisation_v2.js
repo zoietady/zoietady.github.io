@@ -54,7 +54,7 @@ function init() {
 
     var ewCapColor = d3.scaleQuantize().range(['#fcd2b0ff','#fbbe88ff','#fab375ff','#f8a862ff','#f99339ff','#f88c2dff','#f68420ff','#f27507ff','#dc6b07ff','#c66006ff']);
 
-    var ewGdpColor = d3.scaleQuantize().range(['#fcd2b0ff','#fbbe88ff','#fab375ff','#f8a862ff','#f99339ff','#f88c2dff','#f68420ff','#f27507ff','#dc6b07ff','#c66006ff']);
+    var ewGdpColor = d3.scaleQuantize().range(['#dac3e8ff','#d2b7e5ff','#c19ee0ff','#b185dbff','#a979d8ff','#a06cd5ff','#9163cbff','#815ac0ff','#7251b5ff','#6247aaff']);
 
     // Import Dataset
     d3.csv("./dv_dataset_v2.csv").then(function (data) {
@@ -198,7 +198,7 @@ function init() {
             // set the color scale
             var color = d3.scaleOrdinal()
                 .domain(["organic", "glass", "metal", "plastic", "other"])
-                .range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00']);
+                .range(['#fbb4ae','#b3cde3','#ccebc5','#decbe4','#fed9a6']);
 
             function entries(obj) {
                 var data = [];
