@@ -22,7 +22,7 @@ h1,h2{
     grid-template-rows: 10vh 5vh 75.8vh 1vh;
     padding:10px;
     grid-gap:10px;
-    background-color: rgb(242, 242, 242);
+    background-color: white;
 }
 
 #master-container > *{
@@ -40,11 +40,15 @@ h1,h2{
 }
 
 #main-header a{
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: lightgrey;
     padding: 0.4em 0.8em 0.4em 0.8em;
     border-radius: 18px;
     text-decoration: none;
     color: black;
+}
+
+#main-header a:hover{
+    border: black solid 2px;
 }
 
 #variable-controller{
@@ -58,8 +62,12 @@ button{
     margin-top: 0;
     margin-bottom: 0;
     font-size: 0.9em;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: lightgrey;
     border: none;
+}
+
+button:hover{
+    border: black 2px solid;
 }
 
 #legend{
