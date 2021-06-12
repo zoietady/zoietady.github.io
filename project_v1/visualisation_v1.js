@@ -4,7 +4,7 @@ function init() {
         width = chartContainer.offsetWidth - margin.left - margin.right + 10,
         height = chartContainer.offsetHeight - margin.top - margin.bottom - 10;
 
-    var SVG = d3.select("#chart")
+    var svg = d3.select("#chart")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
@@ -17,7 +17,7 @@ function init() {
             .domain([0,d3.max(data, d => d.population)])
             .range([0, width]);
 
-        var xAxis = SVG.append("g")
+        var xAxis = svg.append("g")
             .attr("transform", "translate(0," + height + ")")
             .call(d3.axisBottom(x));
 
@@ -25,10 +25,10 @@ function init() {
             .domain([0,d3.max(data, d => d.gdp)])
             .range([height, 0]);
 
-        var yAxis = SVG.append("g")
+        var yAxis = svg.append("g")
             .call(d3.axisLeft(y));   
      
-        var clip = SVG.append("defs").append("SVG:clipPath")
+        var clip = svg.append("defs").append("SVG:clipPath")
             .attr("id", "clip")
             .append("SVG:rect")
             .attr("width", width)
@@ -36,7 +36,7 @@ function init() {
             .attr("x", 0)
             .attr("y", 0);
 
-        var scatter = SVG.append('g')
+        var scatter = svg.append('g')
             .attr("clip-path", "url(#clip)")
 
         var color = d3.scaleOrdinal()
@@ -84,8 +84,7 @@ function init() {
             .attr("transform","translate(" + 0 + " ," + 5 + ")")
             
         
-        SVG
-            .append("text")
+        svg.append("text")
             .attr("transform", "rotate(-90)")
             .attr("y", 0 - margin.left)
             .attr("x",0 - (height / 2))
@@ -93,8 +92,7 @@ function init() {
             .style("text-anchor", "middle")
             .text("GDP");
 
-        SVG
-            .append("text")             
+        svg.append("text")             
             .attr("transform","translate(" + (width/2) + " ," + (height + margin.top + 20) + ")")
             .style("text-anchor", "middle")
             .text("Population");
@@ -120,7 +118,7 @@ function init() {
                     .attr('dy', function (d) { return newY(d.gdp) })
             })
 
-        SVG.append("rect")
+        svg.append("rect")
             .attr("width", width)
             .attr("height", height)
             .style("fill", "none")
