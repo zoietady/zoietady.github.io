@@ -41,7 +41,7 @@ function init() {
     var mswGdpColor = d3.scaleQuantize().range(['#dac3e8ff','#d2b7e5ff','#c19ee0ff','#b185dbff','#a979d8ff','#a06cd5ff','#9163cbff','#815ac0ff','#7251b5ff','#6247aaff']);
 
     // Individual Scaling
-    var popColor = d3.scaleQuantize().range(['#89c2d9ff','#61a5c2ff','#468fafff','#2c7da0ff','#2a6f97ff','#165f8fff','#014f86ff','#01497cff','#013a63ff','#012a4aff']);
+    var popColor = d3.scaleQuantize().range(['#90E0EF','#6CD5EA','#48CAE4','#00B4D8','#00A5D0','#0096C7','#0077B6','#015BA0','#023E8A','#03045E']);
     
     var gdpColor = d3.scaleQuantize().range(['#b7e4c7ff', '#95d5b2ff', '#74c69dff', '#63bf93ff', '#5bbb8eff', '#52b788ff', '#40916cff', '#2d6a4fff', '#1b4332ff', '#081c15ff']);
 
